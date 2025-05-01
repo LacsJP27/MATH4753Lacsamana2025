@@ -1,0 +1,75 @@
+---
+title: "Introduction to My R Package MATH4753Lacsamana2024"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753Lacsamana2025)
+
+
+```
+
+# Description
+
+This R package contains various statistical functions used throughout the mini labs done over the course of the semester. I have provided examples of some of these functions and their outputs below. Additionally, the package includes documented data, specifically a fire data file.
+
+# R Data
+
+## Fire Data
+
+Check fire.R for description and notations.
+```{r}
+head(fire)
+```
+
+# R Functinos
+
+## mybinomial.R
+
+Returns a table of the number of success and a barplot of the number of successes. Check mybinomial.R for description
+```{r}
+mybin(iter=1000,n=18, p=0.3)
+```
+
+## myboo2.R
+
+Returns a list containing pertinent info the bootstrap function has measured
+
+
+```{r}
+set.seed(39)
+sam=rnorm(25,mean=25,sd=10)
+myboot2(iter=1000,x=sam,fun="mean",alpha=0.05)
+```
+
+## mycltu.R
+
+Returns a histogram displaying the runif sample made with the given params. Check mycltu.R for further documentation
+```{r}
+mycltu(30, 10000, 0, 10)
+```
+
+## mycurve.R
+
+Returns graphs the curve givem the params. Check mycurve.R for futher documentation.
+```{r}
+mycurve(5, 2, 7)
+```
+
+
+
+
+
+
+
